@@ -1,0 +1,330 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Agro Admin",
+		"_postman_id": "9bbf7733-4a13-6f81-05cd-6a4e31d99cee",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET/FIRST/BDD-LIB",
+			"request": {
+				"url": "http://bigstickcarpet.com/postman-bdd/dist/postman-bdd.min.js",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW5AZ21haWwuY29tOnBhc3N3b3Jk",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET/AGRO/LOGIN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"eval(globals.postmanBDD);",
+							"",
+							"describe('this is first test for neha',()=>{",
+							"    it('describes first test',()=>{",
+							"        response.should.have.header('content-type', 'application/json; charset=utf-8');     ",
+							"    });",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{baseurl}}/admin/login",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW5AZ21haWwuY29tOnBhc3N3b3Jk",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://agro.sia.co.in/dashboard/recentlyactivelist",
+			"request": {
+				"url": "http://agro.sia.co.in/dashboard/recentlyactivelist",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW5AZ21haWwuY29tOnBhc3N3b3Jk",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseurl}}/dashboard/counttotalfarmersbyagegergate",
+			"request": {
+				"url": "{{baseurl}}/dashboard/counttotalfarmersbyagegergate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDY3NzM5NjgsImRhdGEiOiI1OTY3NTY1ODQ4NDFkMzNjZGZlNzliODciLCJyb2xlcyI6W3siX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWJmIiwiZmFybWVyQWNjZXNzIjp0cnVlLCJuYW1lIjoiZmFybWVyQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzAiLCJpbnZvaWNlQWNjZXNzIjp0cnVlLCJuYW1lIjoiaW52b2ljZUFjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMxIiwiY21zQWNjZXNzIjp0cnVlLCJuYW1lIjoiY21zQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzIiLCJjYXRhbG9nQWNjZXNzIjp0cnVlLCJuYW1lIjoiY2F0YWxvZ0FjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMzIiwib3JkZXJBY2Nlc3MiOnRydWUsIm5hbWUiOiJvcmRlckFjY2VzcyJ9XSwiaWF0IjoxNTA0MjQ1NzkxfQ.J1WBxswdtXCh2XPBjGrIPE1o76HmF23DNRDKVF-CF00",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"value\": \"Today\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseurl}}/dashboard/countbuyerfromagregate",
+			"request": {
+				"url": "{{baseurl}}/dashboard/countbuyerfromagregate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDY3NzM5NjgsImRhdGEiOiI1OTY3NTY1ODQ4NDFkMzNjZGZlNzliODciLCJyb2xlcyI6W3siX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWJmIiwiZmFybWVyQWNjZXNzIjp0cnVlLCJuYW1lIjoiZmFybWVyQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzAiLCJpbnZvaWNlQWNjZXNzIjp0cnVlLCJuYW1lIjoiaW52b2ljZUFjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMxIiwiY21zQWNjZXNzIjp0cnVlLCJuYW1lIjoiY21zQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzIiLCJjYXRhbG9nQWNjZXNzIjp0cnVlLCJuYW1lIjoiY2F0YWxvZ0FjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMzIiwib3JkZXJBY2Nlc3MiOnRydWUsIm5hbWUiOiJvcmRlckFjY2VzcyJ9XSwiaWF0IjoxNTA0MjQ1NzkxfQ.J1WBxswdtXCh2XPBjGrIPE1o76HmF23DNRDKVF-CF00",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"Today\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseurl}}/dashboard/counttotalfarmersbyagegergate",
+			"request": {
+				"url": "{{baseurl}}/dashboard/counttotalfarmersbyagegergate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDY3NzM5NjgsImRhdGEiOiI1OTY3NTY1ODQ4NDFkMzNjZGZlNzliODciLCJyb2xlcyI6W3siX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWJmIiwiZmFybWVyQWNjZXNzIjp0cnVlLCJuYW1lIjoiZmFybWVyQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzAiLCJpbnZvaWNlQWNjZXNzIjp0cnVlLCJuYW1lIjoiaW52b2ljZUFjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMxIiwiY21zQWNjZXNzIjp0cnVlLCJuYW1lIjoiY21zQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzIiLCJjYXRhbG9nQWNjZXNzIjp0cnVlLCJuYW1lIjoiY2F0YWxvZ0FjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMzIiwib3JkZXJBY2Nlc3MiOnRydWUsIm5hbWUiOiJvcmRlckFjY2VzcyJ9XSwiaWF0IjoxNTA0MjQ1NzkxfQ.J1WBxswdtXCh2XPBjGrIPE1o76HmF23DNRDKVF-CF00",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"Today\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://agro.sia.co.in/dashboard/gettotalorderincome?value=Last%20Month",
+			"request": {
+				"url": {
+					"raw": "http://agro.sia.co.in/dashboard/gettotalorderincome?value=Last%20Month",
+					"protocol": "http",
+					"host": [
+						"agro",
+						"sia",
+						"co",
+						"in"
+					],
+					"path": [
+						"dashboard",
+						"gettotalorderincome"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "Last%20Month",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://agro.sia.co.in/user/getalluserlist?limit=1",
+			"request": {
+				"url": {
+					"raw": "http://agro.sia.co.in/user/getalluserlist?limit=1",
+					"protocol": "http",
+					"host": [
+						"agro",
+						"sia",
+						"co",
+						"in"
+					],
+					"path": [
+						"user",
+						"getalluserlist"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://agro.sia.co.in/user/suspenduser",
+			"request": {
+				"url": "http://agro.sia.co.in/user/suspenduser",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDcwOTY4NjIsImRhdGEiOiI1OTY3NTY1ODQ4NDFkMzNjZGZlNzliODciLCJyb2xlcyI6W3siX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWJmIiwiZmFybWVyQWNjZXNzIjp0cnVlLCJuYW1lIjoiZmFybWVyQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzAiLCJpbnZvaWNlQWNjZXNzIjp0cnVlLCJuYW1lIjoiaW52b2ljZUFjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMxIiwiY21zQWNjZXNzIjp0cnVlLCJuYW1lIjoiY21zQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzIiLCJjYXRhbG9nQWNjZXNzIjp0cnVlLCJuYW1lIjoiY2F0YWxvZ0FjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMzIiwib3JkZXJBY2Nlc3MiOnRydWUsIm5hbWUiOiJvcmRlckFjY2VzcyJ9XSwiaWF0IjoxNTA0NTA0OTYzfQ._Dnz4O0EORB57_OlZsHLypWW6n1lau9jT7RjUTc0pTQ",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ids\":[{\"id\":\"5979aa22dfdb047321a0d04e\"}]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://agro.sia.co.in/user/activatuser",
+			"request": {
+				"url": "http://agro.sia.co.in/user/activatuser",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDcwOTY4NjIsImRhdGEiOiI1OTY3NTY1ODQ4NDFkMzNjZGZlNzliODciLCJyb2xlcyI6W3siX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWJmIiwiZmFybWVyQWNjZXNzIjp0cnVlLCJuYW1lIjoiZmFybWVyQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzAiLCJpbnZvaWNlQWNjZXNzIjp0cnVlLCJuYW1lIjoiaW52b2ljZUFjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMxIiwiY21zQWNjZXNzIjp0cnVlLCJuYW1lIjoiY21zQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzIiLCJjYXRhbG9nQWNjZXNzIjp0cnVlLCJuYW1lIjoiY2F0YWxvZ0FjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMzIiwib3JkZXJBY2Nlc3MiOnRydWUsIm5hbWUiOiJvcmRlckFjY2VzcyJ9XSwiaWF0IjoxNTA0NTA0OTYzfQ._Dnz4O0EORB57_OlZsHLypWW6n1lau9jT7RjUTc0pTQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ids\": [{\"id\": \"5979aa22dfdb047321a0d04e\"}]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://agro.sia.co.in/user/activatuser",
+			"request": {
+				"url": "http://agro.sia.co.in/user/activatuser",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDcwOTY4NjIsImRhdGEiOiI1OTY3NTY1ODQ4NDFkMzNjZGZlNzliODciLCJyb2xlcyI6W3siX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWJmIiwiZmFybWVyQWNjZXNzIjp0cnVlLCJuYW1lIjoiZmFybWVyQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzAiLCJpbnZvaWNlQWNjZXNzIjp0cnVlLCJuYW1lIjoiaW52b2ljZUFjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMxIiwiY21zQWNjZXNzIjp0cnVlLCJuYW1lIjoiY21zQWNjZXNzIn0seyJfaWQiOiI1OTY4YjBmNWJkY2MwMDIxMTZiZDAxYzIiLCJjYXRhbG9nQWNjZXNzIjp0cnVlLCJuYW1lIjoiY2F0YWxvZ0FjY2VzcyJ9LHsiX2lkIjoiNTk2OGIwZjViZGNjMDAyMTE2YmQwMWMzIiwib3JkZXJBY2Nlc3MiOnRydWUsIm5hbWUiOiJvcmRlckFjY2VzcyJ9XSwiaWF0IjoxNTA0NTA0OTYzfQ._Dnz4O0EORB57_OlZsHLypWW6n1lau9jT7RjUTc0pTQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ids\": [{\"id\": \"597616b2e06e8933bd328188\"}]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ALLUSERLIMIT",
+			"request": {
+				"url": {
+					"raw": "{{baseurl}}/user/getalluserlist?limit=2",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"user",
+						"getalluserlist"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
